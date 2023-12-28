@@ -1,0 +1,13 @@
+version: 3.8
+
+services:
+  builder:
+    image: superslicer/builder
+    build:
+      context: .
+    volumes:
+      - ./:/superslicer:z
+    entrypoint: /bin/bash
+    working_dir: /superslicer
+    stdin_open: true
+    tty: true
